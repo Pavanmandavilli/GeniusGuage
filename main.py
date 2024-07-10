@@ -10,10 +10,10 @@ from io import BytesIO
 from streamlit_option_menu import option_menu
 
 
-load_dotenv()
+# load_dotenv()
 
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key="AIzaSyCmLRF3qcvTvfAqU9KJ6_rYyQ2Fi-WTJrw")
 
 
 def get_response(input_prompt):
