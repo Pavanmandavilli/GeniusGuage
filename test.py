@@ -111,9 +111,10 @@ if select == "HOME":
 
     if st.button("Parse Your Resume"):
         if uploaded_file is not None:
-            resume_text = pdf_text(uploaded_file)
-            formatted_prompt = input2.format(text=resume_text, jd=jd)
-            response = get_response(formatted_prompt)
+            with st.spinner("Parsing your resume...Please be patient."):
+                resume_text = pdf_text(uploaded_file)
+                formatted_prompt = input2.format(text=resume_text, jd=jd)
+                response = get_response(formatted_prompt)
             st.subheader("Resume Parsing Result")
             st.markdown(response, unsafe_allow_html=True)
         else:
